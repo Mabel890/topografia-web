@@ -1,7 +1,9 @@
 <template>
   <div>
     <h1>Login</h1>
+    <label for="email">Email:</label>
     <input type="email" v-model="email" />
+    <label for="password">Password:</label>
     <input type="password" v-model="password" />
     <button @click="login()">Log in</button>
     <router-link to="/register">Sign up</router-link>
