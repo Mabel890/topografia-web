@@ -46,6 +46,10 @@ export default {
           "Imprimir usuario registrado en la base de datos",
           userRegister
         );
+
+        this.$router.push({
+          name: "Login",
+        });
       } catch (error) {
         console.error(error);
       }
