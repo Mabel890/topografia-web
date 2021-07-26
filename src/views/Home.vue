@@ -1,20 +1,15 @@
 <template>
-  <div class="home">
-    <p>{{ user }}</p>
-  </div>
+  <hello-world />
 </template>
 
 <script>
-export default {
-  name: "Home",
+  import HelloWorld from '../components/HelloWorld'
 
-  data() {
-    return {
-      user: {},
-    };
-  },
-  created() {
-    this.user = localStorage.getItem("userApp");
-  },
-};
+  export default {
+    name: 'Home',
+
+    components: {
+      HelloWorld,
+    },
+  }
 </script>
