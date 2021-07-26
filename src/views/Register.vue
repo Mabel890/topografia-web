@@ -31,7 +31,7 @@
           </v-card-text>
           <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn color="primary" @click="register()">Sign up</v-btn>
+            <v-btn color="primary" @click="register()">Register</v-btn>
             <v-btn color="primary" to="/login">Login</v-btn>
           </v-card-actions>
         </v-card>
@@ -49,7 +49,7 @@ export default {
       name: "Mabel",
       email: "mabelvillada890@gmail.com",
       password: "Fiagfcj",
-      id_role: 123,
+      id_role: 3,
     };
   },
   methods: {
