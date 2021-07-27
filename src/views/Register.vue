@@ -41,7 +41,7 @@
 </template>
 
 <script>
-import axios from "axios";
+import userServices from '../services/Users/index';
 export default {
   name: "Login",
   data() {
@@ -66,10 +66,7 @@ export default {
         };
         console.log("Vamos a imprimir el usuario", user);
 
-        const userRegister = await axios.post(
-          "http://localhost:3000/api/users/register",
-          user
-        );
+        const userRegister = await userServices.register(user);
         console.log(
           "Imprimir usuario registrado en la base de datos",
           userRegister
