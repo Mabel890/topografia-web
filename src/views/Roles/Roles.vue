@@ -8,12 +8,17 @@
         <tr>
           <th class="text-left">Id</th>
           <th class="text-left">Name</th>
+          <th class="text-left">Actions</th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="(entry, i) in roles" :key="i">
           <td>{{ entry.id }}</td>
           <td>{{ entry.name }}</td>
+          <td>
+            <v-btn color="success" @click="updateRole(entry.id)">Edit</v-btn>
+            <v-btn color="error" @click="deleteRole()">Delete</v-btn>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -33,7 +38,7 @@ export default {
   },
 
   created() {
-      this.getRoles();
+    this.getRoles();
   },
 
   methods: {
@@ -41,11 +46,23 @@ export default {
       try {
         // const roleData = await roleServices.listRoles();
         // this.roles =  roleData.data;
-        const {data} = await roleServices.listRoles();
+        const { data } = await roleServices.listRoles();
         this.roles = data;
       } catch (error) {
         console.error(error);
       }
+    },
+    updateRole(id) {
+      console.log("Editar role", id);
+      this.$router.push({
+        name: "UpdateRoles",
+        params: {
+          rolesId: id,
+        },
+      });
+    },
+    deleteRole() {
+      console.log("Borrar role");
     },
   },
 };
