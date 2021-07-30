@@ -70,6 +70,14 @@ const routes = [
       isPublic: false,
     },
   },
+  {
+    path: '/roles/update/:rolesId',
+    name: 'UpdateRoles', 
+    component: () => import('../views/Roles/UpdateRole.vue'),
+    meta: {
+      isPublic: false,
+    },
+  },
 ]
 
 const router = new VueRouter({
