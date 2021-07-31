@@ -31,7 +31,7 @@
           </v-card-text>
           <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn color="primary" @click="register()">Register</v-btn>
+            <v-btn color="primary" @click="registerUser()">Register</v-btn>
             <v-btn color="primary" to="/login">Login</v-btn>
           </v-card-actions>
         </v-card>
@@ -53,12 +53,10 @@ export default {
     };
   },
   methods: {
-    /*
     click() {
       console.log(`${this.email} ${this.password}`);
     },
-    */
-    async register() {
+    async registerUser() {
       try {
         const user = {
           name: this.name,
@@ -68,7 +66,7 @@ export default {
         };
         console.log("Vamos a imprimir el usuario", user);
 
-        const userRegister = await userServices.register(user);
+        const userRegister = await userServices.registerUser(user);
         console.log(
           "Imprimir usuario registrado en la base de datos",
           userRegister
