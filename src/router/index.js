@@ -78,6 +78,16 @@ const routes = [
       isPublic: false,
     },
   },
+  /*
+  {
+    path: '/roles/delete/:rolesId',
+    name: 'DeleteRoles', 
+    component: () => import('../views/Roles/DeleteRoles.vue'),
+    meta: {
+      isPublic: false,
+    },
+  },
+  */
 ]
 
 const router = new VueRouter({

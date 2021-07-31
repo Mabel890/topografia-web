@@ -15,8 +15,8 @@ roleServices.updateRoles = async (id, name) => {
   return await axios.put(`${baseUrl}/api/roles/updateRoles/${id}`, {name: name});
 };
 
-roleServices.deleteRole = async () => {
-  return await axios.delete(`${baseUrl}/api/roles/deleteRole/:id`);
+roleServices.deleteRole = async (id, name) => {
+  return await axios.delete(`${baseUrl}/api/roles/deleteRole/${id}`, {name: name});
 };
 
 roleServices.listRole = async (id) => {
