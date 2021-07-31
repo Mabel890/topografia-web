@@ -47,14 +47,6 @@ const routes = [
     },
   },
   {
-    path: '/profile',
-    name: 'Profile',
-    component: () => import('../views/Profile.vue'),
-    meta: {
-      isPublic: true,
-    },
-  },
-  {
     path: '/roles',
     name: 'Roles',
     component: () => import('../views/Roles/Roles.vue'),
