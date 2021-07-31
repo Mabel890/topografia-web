@@ -41,7 +41,7 @@
 </template>
 
 <script>
-import axios from "axios";
+import userServices from '../services/Users/index';
 export default {
   name: "Register",
   data() {
