@@ -53,9 +53,11 @@ export default {
     };
   },
   methods: {
+    /*
     click() {
       console.log(`${this.email} ${this.password}`);
     },
+    */
     async register() {
       try {
         const user = {
