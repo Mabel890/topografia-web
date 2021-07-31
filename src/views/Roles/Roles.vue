@@ -61,8 +61,8 @@ export default {
         },
       });
     },
-    deleteRole() {
-      console.log("Borrar role");
+    deleteRole(id) {
+      console.log("Borrar role", id);
     },
   },
 };
